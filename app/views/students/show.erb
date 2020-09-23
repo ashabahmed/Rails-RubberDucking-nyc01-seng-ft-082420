@@ -1,0 +1,10 @@
+<h1> <%=@student.name%> </h1>
+<hr>
+
+<h3> <%=@student.name %>'s ducks: </h3>
+
+<ul>
+    <%@student.ducks.each do |d|%>
+        <li> <%= d.name %> </li>
+    <%end%>
+</ul>

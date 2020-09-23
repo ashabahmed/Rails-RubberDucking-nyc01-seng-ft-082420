@@ -1,0 +1,20 @@
+<h1> Log a new student! </h1>
+<hr>
+
+<%if flash[:message]%>
+    <%flash[:message].each do |error|%>
+        <%= error%>
+    <% end %>
+<% end %>
+
+<%= form_for @student do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label "Select Mod(1-5):" %>
+    <%= f.number_field :mod %>
+    <br>
+    <%= f.submit %>
+    
+<% end %>
+
